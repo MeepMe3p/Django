@@ -1,0 +1,17 @@
+<h1>hello world</h1>
+<h1>Category{{category_name}}</h1>
+<!-- <h1>{{model}} -- did not work</h1> -->
+{%if turtles%}
+<p>naaa koooo</p>
+<ul>
+    {%for cat in turtles%}
+    <!-- <li>{{cat.category_name}}</li> -->
+    <li>
+        <a href="{%url 'blogs:CategoriesDetail' cat.id %}">{{cat.category_name}}</a>
+    </li>
+    {%endfor%}
+</ul>
+{%else %}
+<p>it is empty no categories{%endif%}</p>
+
+
